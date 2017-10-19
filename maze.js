@@ -1,6 +1,7 @@
 window.onload= function(){
 	var boundary=document.getElementById("boundary1")
 	var allboundary= document.querySelectorAll(".boundary");
+	var end=document.getElementById("end");
 
 	boundary.onmouseover=function () {
 		boundary.classList.add("youlose");
@@ -10,6 +11,13 @@ window.onload= function(){
 			for (var i = 0; i < allboundary.length-1; i++) {
 				allboundary[i].classList.add("youlose");
 			}
+		}
+	}
+	end.onmouseover= function () {
+		if (boundary.getAttribute("class")== "boundary") {
+			console.log("You Win!");
+		} else {
+			console.log("You Lose");
 		}
 	}
 
