@@ -4,6 +4,8 @@ window.onload= function(){
 	var end=document.getElementById("end");
 	var startbutton= document.getElementById("start"); 
 	var statushead = document.getElementById("status");
+	var gamemaze= document.getElementById("maze");
+
 
 	boundary.onmouseover=function () {
 		boundary.classList.add("youlose");
@@ -28,6 +30,12 @@ window.onload= function(){
 		for (var i = 0; i < allboundary.length-1; i++) {
 			allboundary[i].setAttribute("class", "boundary");
 		}
+	}
+
+	gamemaze.onmouseleave= function () {
+		for (var i = 0; i < allboundary.length-1; i++) {
+				allboundary[i].classList.add("youlose");
+			}
 	}
 
 }
